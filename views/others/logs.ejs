@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="../../assets/javascripts/jquery.js"></script>
+    <link rel="stylesheet" href="../../assets/stylesheets/style.css" />
+  </head>
+  <body class="bg-[#080714] overflow-hidden select-none">
+    <div class="flex justify-center items-center flex-col h-screen w-screen">
+      <div class="flex items-center justify-center flex-col mt-10">
+        <nav class="flex" aria-label="Breadcrumb">
+          <ol class="inline-flex items-center space-x-1 md:space-x-3">
+            <li>
+              <div class="flex items-center">
+                <span
+                  id="statusMinecraft"
+                  class="ml-1 text-sm font-medium text-gray-500 md:ml-2"
+                  >Pobieranie Minecraft</span
+                >
+              </div>
+            </li>
+            <li aria-current="page">
+              <div class="flex items-center">
+                <svg
+                  aria-hidden="true"
+                  class="w-6 h-6 text-gray-400"
+                  fill="currentColor"
+                  viewBox="0 0 20 20"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"
+                    clip-rule="evenodd"
+                  ></path>
+                </svg>
+                <span
+                  id="statusRunning"
+                  class="ml-1 text-sm font-medium text-gray-500 md:ml-2"
+                  >Uruchamianie</span
+                >
+              </div>
+            </li>
+          </ol>
+        </nav>
+      </div>
+      <div class="h-screen w-screen flex items-center justify-center flex-col">
+        <div class="w-[90%] bg-gray-200 rounded-full dark:bg-gray-700">
+          <div
+            id="progressBar"
+            class="bg-[#FFA3FD] text-xs font-medium text-blue-100 text-center p-0.5 leading-none rounded-full"
+            style="width: 100%"
+          >
+            0%
+          </div>
+        </div>
+        <div class="w-screen text-left">
+          <p id="log" class="text-sm ml-8 font-medium text-gray-500">
+            Idling...
+          </p>
+        </div>
+        <div
+          id="mcOutput"
+          class="hidden bg-slate-900 rounded-md text-white overflow-auto mb-12 mx-4 mt-4 self-start whitespace-nowrap"
+        ></div>
+      </div>
+    </div>
+
+    <script src="../../assets/javascripts/renderers/logs.js"></script>
+  </body>
+</html>

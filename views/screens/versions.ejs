@@ -1,0 +1,276 @@
+<div id="versions" class="screen" style="display: none">
+  <div class="flex-row h-[85vh] flex justify-center">
+    <div class="float-left mx-24 flex justify-center flex-col">
+      <h1
+        class="mb-4 text-4xl font-extrabold leading-none tracking-tight md:text-5xl lg:text-6xl dark:text-white"
+      >
+        Better
+      </h1>
+      <span
+        class="mb-4 text-4xl font-extrabold leading-none tracking-tight md:text-5xl lg:text-6xl text-[#E384FF]"
+        >Launcher</span
+      >
+    </div>
+    <div
+      id="right-content "
+      class="float-right text-center flex items-center w-\[100\%\] flex-col mx-24 justify-center"
+    >
+      <p
+        class="text-lg font-normal text-gray-500 lg:text-xl dark:text-gray-400"
+      >
+        Teraz wybierz tylko wersję gry
+      </p>
+
+      <button
+        id="dropdownVersionButton"
+        data-dropdown-toggle="dropdownV"
+        class="text-white bg-[#865DFF] my-6 hover:bg-[#6a3bf7] focus:ring-transparent focus:outline-none font-medium rounded-lg text-sm px-4 py-2.5 text-center inline-flex items-center hover:transition-all transition-all duration-300"
+        type="button"
+      >
+        Wybierz wersję gry
+        <svg
+          class="w-4 h-4 ml-2"
+          aria-hidden="true"
+          fill="none"
+          stroke="currentColor"
+          viewBox="0 0 24 24"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            d="M19 9l-7 7-7-7"
+          ></path>
+        </svg>
+      </button>
+      <!-- Dropdown menu -->
+      <div
+        id="dropdownV"
+        class="z-10 hidden divide-y divide-gray-100 rounded-lg shadow w-44 bg-[#6b4acc]"
+      >
+        <ul
+          class="py-2 text-sm text-gray-700 dark:text-gray-200"
+          aria-labelledby="dropdownDefaultButton"
+          id="versionsList"
+        ></ul>
+        <div class="py-2">
+          <a
+            onclick="dropdownVersionButton.click()"
+            id="openVersionModalButton"
+            data-modal-target="staticModal"
+            data-modal-toggle="staticModal"
+            class="block font-bold px-4 py-2 text-sm cursor-pointer text-gray-700 hover:bg-[#865DFF] dark:text-gray-200 dark:hover:text-white focus:ring-transparent hover:transition-all transition-all duration-300"
+            >Więcej wersji gry</a
+          >
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div
+  id="staticModal"
+  data-modal-backdrop="static"
+  tabindex="-1"
+  aria-hidden="true"
+  class="fixed hidden top-0 animate-opacityAnimation left-0 right-0 z-50 w-full p-4 overflow-x-hidden overflow-y-auto md:inset-0 h-[calc(100%-1rem)] md:h-full"
+>
+  <div class="relative w-full h-full max-w-2xl md:h-auto">
+    <!-- Modal content -->
+    <div class="relative rounded-lg bg-[#11111a] shadow-2xl">
+      <!-- Modal header -->
+      <div
+        class="flex items-start justify-between p-4 border-b rounded-t dark:border-gray-600"
+      >
+        <h3 class="text-xl font-semibold text-gray-900 dark:text-white">
+          Wybierz wersje gry
+        </h3>
+        <button
+          type="button"
+          class="text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm p-1.5 ml-auto inline-flex items-center dark:hover:bg-gray-600 dark:hover:text-white"
+          data-modal-hide="staticModal"
+        >
+          <svg
+            class="w-5 h-5"
+            fill="currentColor"
+            viewBox="0 0 20 20"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              fill-rule="evenodd"
+              d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
+              clip-rule="evenodd"
+            ></path>
+          </svg>
+        </button>
+      </div>
+      <!-- Modal body -->
+      <div class="p-6 h-[50vh] flex justify-center max-h-full">
+        <div class="float-left w-[30%]">
+          <div
+            class="w-full text-gray-900 border border-gray-200 rounded-lg bg-[#191825] dark:border-gray-600 dark:text-white"
+          >
+            <button
+              id="instCategoryButton"
+              type="button"
+              class="relative inline-flex items-center w-full px-4 py-2 text-sm font-medium border-b border-gray-200 first:rounded-t-lg last:rounded-b-lg hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-2 focus:ring-blue-700 focus:text-blue-700 dark:border-gray-600 dark:hover:bg-gray-600 dark:hover:text-white dark:focus:ring-gray-500 dark:focus:text-white"
+            >
+              <svg
+                aria-hidden="true"
+                class="w-4 h-4 mr-2 fill-current"
+                fill="currentColor"
+                viewBox="0 0 20 20"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-6-3a2 2 0 11-4 0 2 2 0 014 0zm-2 4a5 5 0 00-4.546 2.916A5.986 5.986 0 0010 16a5.986 5.986 0 004.546-2.084A5 5 0 0010 11z"
+                  clip-rule="evenodd"
+                ></path>
+              </svg>
+              Zainstalowane
+            </button>
+            <button
+              id="releaseCategoryButton"
+              type="button"
+              class="relative inline-flex items-center w-full px-4 py-2 text-sm font-medium border-b border-gray-200 hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-2 focus:ring-blue-700 focus:text-blue-700 dark:border-gray-600 dark:hover:bg-gray-600 dark:hover:text-white dark:focus:ring-gray-500 dark:focus:text-white"
+            >
+              <svg
+                aria-hidden="true"
+                class="w-4 h-4 mr-2 fill-current"
+                fill="currentColor"
+                viewBox="0 0 20 20"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M5 4a1 1 0 00-2 0v7.268a2 2 0 000 3.464V16a1 1 0 102 0v-1.268a2 2 0 000-3.464V4zM11 4a1 1 0 10-2 0v1.268a2 2 0 000 3.464V16a1 1 0 102 0V8.732a2 2 0 000-3.464V4zM16 3a1 1 0 011 1v7.268a2 2 0 010 3.464V16a1 1 0 11-2 0v-1.268a2 2 0 010-3.464V4a1 1 0 011-1z"
+                ></path>
+              </svg>
+              Wydane
+            </button>
+            <button
+              id="snapshotCategoryButton"
+              type="button"
+              class="relative inline-flex items-center w-full px-4 py-2 text-sm font-medium border-b border-gray-200 hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-2 focus:ring-blue-700 focus:text-blue-700 dark:border-gray-600 dark:hover:bg-gray-600 dark:hover:text-white dark:focus:ring-gray-500 dark:focus:text-white"
+            >
+              <svg
+                aria-hidden="true"
+                class="w-4 h-4 mr-2 fill-current"
+                fill="currentColor"
+                viewBox="0 0 20 20"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M5 3a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2V5a2 2 0 00-2-2H5zm0 2h10v7h-2l-1 2H8l-1-2H5V5z"
+                  clip-rule="evenodd"
+                ></path>
+              </svg>
+              Snapshoty
+            </button>
+            <button
+              id="alphaCategoryButton"
+              type="button"
+              class="relative inline-flex items-center w-full px-4 py-2 text-sm font-medium border-b border-gray-200 hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-2 focus:ring-blue-700 focus:text-blue-700 dark:border-gray-600 dark:hover:bg-gray-600 dark:hover:text-white dark:focus:ring-gray-500 dark:focus:text-white"
+            >
+              <svg
+                aria-hidden="true"
+                class="w-4 h-4 mr-2 fill-current"
+                fill="currentColor"
+                viewBox="0 0 20 20"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M5 3a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2V5a2 2 0 00-2-2H5zm0 2h10v7h-2l-1 2H8l-1-2H5V5z"
+                  clip-rule="evenodd"
+                ></path>
+              </svg>
+              Alpha & Beta
+            </button>
+            <button
+              id="fabricCategoryButton"
+              type="button"
+              class="relative inline-flex items-center w-full px-4 py-2 text-sm font-medium border-b border-gray-200 hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-2 focus:ring-blue-700 focus:text-blue-700 dark:border-gray-600 dark:hover:bg-gray-600 dark:hover:text-white dark:focus:ring-gray-500 dark:focus:text-white"
+            >
+              <svg
+                aria-hidden="true"
+                class="w-4 h-4 mr-2 fill-current"
+                fill="currentColor"
+                viewBox="0 0 20 20"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M5 4a1 1 0 00-2 0v7.268a2 2 0 000 3.464V16a1 1 0 102 0v-1.268a2 2 0 000-3.464V4zM11 4a1 1 0 10-2 0v1.268a2 2 0 000 3.464V16a1 1 0 102 0V8.732a2 2 0 000-3.464V4zM16 3a1 1 0 011 1v7.268a2 2 0 010 3.464V16a1 1 0 11-2 0v-1.268a2 2 0 010-3.464V4a1 1 0 011-1z"
+                ></path>
+              </svg>
+              Fabric
+            </button>
+            <button
+              id="forgeCategoryButton"
+              type="button"
+              class="relative inline-flex items-center w-full px-4 py-2 text-sm font-medium border-b border-gray-200 hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-2 focus:ring-blue-700 focus:text-blue-700 dark:border-gray-600 dark:hover:bg-gray-600 dark:hover:text-white dark:focus:ring-gray-500 dark:focus:text-white"
+            >
+              <svg
+                aria-hidden="true"
+                class="w-4 h-4 mr-2 fill-current"
+                fill="currentColor"
+                viewBox="0 0 20 20"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M5 4a1 1 0 00-2 0v7.268a2 2 0 000 3.464V16a1 1 0 102 0v-1.268a2 2 0 000-3.464V4zM11 4a1 1 0 10-2 0v1.268a2 2 0 000 3.464V16a1 1 0 102 0V8.732a2 2 0 000-3.464V4zM16 3a1 1 0 011 1v7.268a2 2 0 010 3.464V16a1 1 0 11-2 0v-1.268a2 2 0 010-3.464V4a1 1 0 011-1z"
+                ></path>
+              </svg>
+              Forge
+            </button>
+            <button
+              id="optifineCategoryButton"
+              type="button"
+              class="relative inline-flex items-center w-full px-4 py-2 text-sm font-medium first:rounded-t-lg last:rounded-b-lg hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-2 focus:ring-blue-700 focus:text-blue-700 dark:border-gray-600 dark:hover:bg-gray-600 dark:hover:text-white dark:focus:ring-gray-500 dark:focus:text-white"
+            >
+              <svg
+                aria-hidden="true"
+                class="w-4 h-4 mr-2 fill-current"
+                fill="currentColor"
+                viewBox="0 0 20 20"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M2 9.5A3.5 3.5 0 005.5 13H9v2.586l-1.293-1.293a1 1 0 00-1.414 1.414l3 3a1 1 0 001.414 0l3-3a1 1 0 00-1.414-1.414L11 15.586V13h2.5a4.5 4.5 0 10-.616-8.958 4.002 4.002 0 10-7.753 1.977A3.5 3.5 0 002 9.5zm9 3.5H9V8a1 1 0 012 0v5z"
+                  clip-rule="evenodd"
+                ></path>
+              </svg>
+              Optifine
+            </button>
+          </div>
+        </div>
+        <div class="items-center ml-4 w-[30%]">
+          <div class="h-[100%] w-full">
+            <div
+              class="float-left overflow-y-scroll scrollbar h-full w-full overflow-x-hidden"
+            >
+              <div
+                id="firstTable"
+                class="w-full text-gray-900 border border-gray-200 rounded-lg bg-[#191825] dark:border-gray-600 dark:text-white"
+              ></div>
+            </div>
+          </div>
+        </div>
+        <div class="items-center ml-4 w-[30%]">
+          <div class="h-[100%] w-full">
+            <div
+              class="float-left overflow-y-scroll scrollbar h-full w-full overflow-x-hidden"
+            >
+              <div
+                id="secondTable"
+                class="w-full text-gray-900 border border-gray-200 rounded-lg bg-[#191825] dark:border-gray-600 dark:text-white"
+              ></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
