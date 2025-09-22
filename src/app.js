@@ -636,8 +636,8 @@ ipcMain.handle("update-app", () => {
 
 const pkgVersion = async () => {
   const pkg = {
-    version: "2.4.2",
-    buildVersion: 1004
+    version: "1.0.1",
+    buildVersion: 1000
   };
   return pkg;
 };
