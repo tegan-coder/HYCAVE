@@ -14,7 +14,7 @@ const {
 const { Microsoft } = require("./assets/js/libs/mc/Index");
 const { autoUpdater } = require("electron-updater");
 const { io } = require("socket.io-client");
-const socket = io("https://battly.site");
+const socket = io("https://api.battlylauncher.com");
 //process.env["NODE_TLS_REJECT_UNAUTHORIZED"] = "0";
 const fetch = require("node-fetch");
 const fs = require("fs");
