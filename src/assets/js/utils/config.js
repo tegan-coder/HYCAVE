@@ -6,8 +6,8 @@
 const pkg = require('../package.json');
 let url = pkg.user ? `${pkg.url}/${pkg.user}` : pkg.url
 
-let config = 'https://github.com/tegan-coder/api-battlystudios/blob/main/battlylauncher/launcher/config-launcher/config.json';
-let news = 'https://github.com/tegan-coder/api-battlystudios/blob/main/battlylauncher/launcher/news-launcher/news.json';
+let config = 'https://battly.site/battlylauncher/launcher/config-launcher/config.json';
+let news = 'https://battly.site/battlylauncher/launcher/news-launcher/news.json';
 const axios = require("axios")
 const https = require("https")
 const httpsAgent = new https.Agent({

@@ -14,7 +14,7 @@ const {
 const { Microsoft } = require("./assets/js/libs/mc/Index");
 const { autoUpdater } = require("electron-updater");
 const { io } = require("socket.io-client");
-const socket = io("https://api.battlylauncher.com");
+const socket = io("https://battly.site");
 //process.env["NODE_TLS_REJECT_UNAUTHORIZED"] = "0";
 const fetch = require("node-fetch");
 const fs = require("fs");
@@ -388,7 +388,7 @@ if (!gotTheLock) {
 } else {
   app.whenReady().then(() => {
     if (fs.existsSync(path.join(dataDirectory, ".battly/launchboost"))) {
-      fetch("https://github.com/tegan-coder/api-battlystudios/blob/main/battlylauncher/launcher/config-launcher/config.json").then(async res => {
+      fetch("https://battly.site/battlylauncher/launcher/config-launcher/config.json").then(async res => {
         let data = await res.json();
         let version = data.latestVersion;
         let actualVersion = (require("../package.json")).version;
@@ -646,7 +646,7 @@ ipcMain.handle("update-new-app", async () => {
   console.log(await pkgVersion());
 
   return new Promise(async (resolve, reject) => {
-    fetch("https://github.com/tegan-coder/api-battlystudios/blob/main/battlylauncher/launcher/config-launcher/config.json").then(async res => {
+    fetch("https://battly.site/battlylauncher/launcher/config-launcher/config.json").then(async res => {
       let data = await res.json();
       let version = data.battly.release;
 
