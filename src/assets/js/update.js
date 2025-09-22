@@ -14,8 +14,8 @@ let lang;
 
 const pkgVersion = async () => {
     const pkg = {
-        version: "1.0.4",
-        buildVersion: 1004
+        version: "1.0.5",
+        buildVersion: 1005
     };
     return pkg;
 };
